@@ -2,10 +2,26 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
+# def product_of_all_other_numbers(arr):
+#    result = []
+#    for i in range(len(arr)):
+#        if i < len(arr):
+#            multiplyers = arr[:i] + arr[i+1:]
+#            product = 1
+#            for x in multiplyers:
+#                product *= x
+#            result.append(product)
+#    return result
 
-    pass
+def product_of_all_other_numbers(arr, cache=None):
+   result = []
+   for i in range(len(arr)):
+           multiplyers = arr[:i] + arr[i+1:]
+           product = 1
+           for x in multiplyers:
+               product *= x
+           result.append(product)
+   return result
 
 
 if __name__ == '__main__':
